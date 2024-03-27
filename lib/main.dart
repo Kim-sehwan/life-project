@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: '어플 이름'),
+      home: const MyHomePage(title: 'VIDA'),
     );
   }
 }
@@ -46,22 +46,10 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
         titleTextStyle: const TextStyle(color: Colors.white, fontSize: 30, fontFamily: "bhs"),
       ),
-      body: Center(
-
-        child: Column(
-
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              '어플 내용 넣을 곳',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
+      body: const Center(
+        child: Text("이 어플리케이션은 여러분의 건강을 책임집니다.")
       ),
+      //신체 검사 (AI적용)
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
@@ -70,8 +58,11 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
         items: const [
+          //기본화면
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "홈"),
+          //커뮤니티나 팁 겁색 화면
           BottomNavigationBarItem(icon: Icon(Icons.search), label: "검색"),
+          //마이 어카운트
           BottomNavigationBarItem(icon: Icon(Icons.account_circle), label: "프로필"),
         ],
       ),
