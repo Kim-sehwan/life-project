@@ -78,6 +78,9 @@ flutter:
   - family: bhs
     fonts:
     - asset: assets/fonts/bhs.ttf
+  - family: sbb
+    fonts:
+    - asset: assets/fonts/SBB.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
