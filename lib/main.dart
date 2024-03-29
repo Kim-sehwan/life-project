@@ -25,12 +25,21 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        body: Center(
-          child: Padding(
+        body: Column(children: [
+          Padding(
             padding: const EdgeInsets.all(20),
             child: Container(
               width: double.infinity,
+              height: 300,
               decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 5,
+                    blurRadius: 7,
+                    offset: const Offset(0, 3),
+                  )
+                ],
                 borderRadius: BorderRadius.circular(10),
                 color: Colors.white,
               ),
@@ -39,8 +48,8 @@ class MyApp extends StatelessWidget {
                 child: Login(),
               ),
             ),
-          ),
-        ),
+          )
+        ]),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.search), label: "검색"),
